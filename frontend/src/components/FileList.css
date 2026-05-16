@@ -1,0 +1,108 @@
+.file-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.file-list-header h2 {
+  font-size: 1.25rem;
+}
+
+.refresh-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.refresh-btn:hover:not(:disabled) {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.empty-state {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 2rem;
+}
+
+.files-grid {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.file-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  align-items: flex-start;
+}
+
+.file-preview {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.file-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.file-title {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0.25rem;
+}
+
+.file-meta {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.file-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.view-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: var(--danger);
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0;
+}
+
+.delete-btn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.delete-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
